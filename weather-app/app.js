@@ -1,5 +1,6 @@
 const request = require('postman-request')
 const geocode = require('./utils/geocode') 
+const forecast = require('./utils/forecast')
 
 // const url = 'http://api.weatherstack.com/current?access_key=2dc00b75f0bdc5f3b5f858adc8da7d8e&query=37.8267,-122.4233&units=f'
 
@@ -25,7 +26,12 @@ const geocode = require('./utils/geocode')
 
 
 
-geocode('Boston', (error, data) => {
+// geocode('Boston', (error, data) => {
+//     console.log('Error', error)
+//     console.log('Data', data)
+// })
+
+forecast(-75.7088, 44.1545, (error, data) => {
     console.log('Error', error)
     console.log('Data', data)
 })
